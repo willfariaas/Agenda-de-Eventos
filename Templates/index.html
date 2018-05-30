@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Página inicial</title>
+</head>
+<body>
+	<h1>Agenda colaborativa de eventos</h1>
+	<hr>
+	<h4>Próximos eventos...</h4>
+	<ul>
+		{% for evento in eventos %}
+		<li><a href="{{ url_for('cadastrar', id=evento._id, action='edit')}}">{{ evento.titulo}}</a></li>
+		{% endfor %}
+	</ul><br/>
+	<a href="{{ url_for('cadastrar', action='new')}}">Cadastrar evento</a>
+
+</body>
+</html>

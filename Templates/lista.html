@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Lista de Eventos</title>
+</head>
+<body>
+	<h1>{{ eventos[0].titulo}}</h1>
+	<hr>
+	<form action="{{ url_for('index')}}" method="POST">
+		<table border="0">
+			<tr>
+				<td>Descrição:</td>
+				<td>{{ eventos[0].descricao}}</td>
+			</tr>
+			<tr>
+				<td>Local:</td>
+				<td>{{ eventos[0].local}}</td>
+			</tr>
+			<tr>
+				<td>Data e Hora:</td>
+				<td>{{ eventos[0].data}}</td>
+			</tr>
+		</table><br>
+		<input type="submit" value="Voltar">
+	</form>
+</body>
+</html>

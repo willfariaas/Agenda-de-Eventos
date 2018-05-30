@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Página de Cadastro</title>
+</head>
+<body>
+	<h1>Cadastro de evento</h1>
+	<hr>
+	<form action="{{ url_for('cadastro')}}" method="POST">
+		<table>
+			<tr>
+				<td>Título:</td>
+				<td><input type="text" name="titulo" size="70" value="{{ eventos[0].titulo}}" {{ disabled}}></td>
+			</tr>
+			<tr>
+				<td>Descrição:</td>
+				<td><input type="text" name="descricao" size="70" value="{{ eventos[0].descricao}}" {{ disabled}}></td>
+			</tr>
+			<tr>
+				<td>Local:</td>
+				<td><input type="text" name="local" size="70" value="{{ eventos[0].local}}" {{ disabled}}></td>
+			</tr>
+			<tr>
+				<td>Data e Hora:</td>
+				<td><input type="text" name="data" size="70" value="{{ eventos[0].data}}" {{ disabled}}></td>
+			</tr>
+		</table><br>
+		<input type="submit" value="Cadastrar" {{ disabled}}>
+		<input type="submit" value="Voltar">
+	</form>
+</body>
+</html>
